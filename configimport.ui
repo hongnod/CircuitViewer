@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ConfigImport</class>
+ <widget class="QWidget" name="ConfigImport">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>880</width>
+    <height>399</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>31</x>
+     <y>11</y>
+     <width>821</width>
+     <height>381</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>选择导入的sheet：</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="comboBox"/>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>CMIiD</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QComboBox" name="comboBox_2"/>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLabel" name="label_12">
+      <property name="text">
+       <string>修改说明</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="4">
+     <widget class="QComboBox" name="comboBox_11"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>CircuitId(CMI)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QComboBox" name="comboBox_3"/>
+    </item>
+    <item row="2" column="2">
+     <widget class="QLabel" name="label_10">
+      <property name="text">
+       <string>是否确认</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="4">
+     <widget class="QComboBox" name="comboBox_12"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>ProductName</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QComboBox" name="comboBox_4"/>
+    </item>
+    <item row="3" column="2">
+     <widget class="QLabel" name="label_13">
+      <property name="text">
+       <string>集团调单号</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="4">
+     <widget class="QComboBox" name="comboBox_15"/>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>OrderType</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QComboBox" name="comboBox_5"/>
+    </item>
+    <item row="4" column="2">
+     <widget class="QLabel" name="label_16">
+      <property name="text">
+       <string>电路编号</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="4">
+     <widget class="QComboBox" name="comboBox_17"/>
+    </item>
+    <item row="5" column="0">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>Bandwidth</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="1">
+     <widget class="QComboBox" name="comboBox_6"/>
+    </item>
+    <item row="5" column="2">
+     <widget class="QLabel" name="label_22">
+      <property name="text">
+       <string>路由</string>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="4" rowspan="2">
+     <widget class="QComboBox" name="comboBox_16"/>
+    </item>
+    <item row="6" column="0" rowspan="2">
+     <widget class="QLabel" name="label_7">
+      <property name="text">
+       <string>CustomerName</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1" rowspan="2">
+     <widget class="QComboBox" name="comboBox_7"/>
+    </item>
+    <item row="6" column="2" rowspan="2">
+     <widget class="QLabel" name="label_18">
+      <property name="text">
+       <string>维护省</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="4" rowspan="2">
+     <widget class="QComboBox" name="comboBox_21"/>
+    </item>
+    <item row="8" column="0" rowspan="2">
+     <widget class="QLabel" name="label_8">
+      <property name="text">
+       <string>CompletionDate</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="1" rowspan="2">
+     <widget class="QComboBox" name="comboBox_8"/>
+    </item>
+    <item row="8" column="2" rowspan="2">
+     <widget class="QLabel" name="label_21">
+      <property name="text">
+       <string>所属EM</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="4" rowspan="2">
+     <widget class="QComboBox" name="comboBox_20"/>
+    </item>
+    <item row="10" column="2" rowspan="2">
+     <widget class="QLabel" name="label_19">
+      <property name="text">
+       <string>复核</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="0" rowspan="2">
+     <widget class="QLabel" name="label_9">
+      <property name="text">
+       <string>A端/B端/自用</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="1" rowspan="2">
+     <widget class="QComboBox" name="comboBox_10"/>
+    </item>
+    <item row="12" column="2">
+     <widget class="QLabel" name="label_17">
+      <property name="text">
+       <string>所属SDH系统</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="4">
+     <widget class="QComboBox" name="comboBox_18"/>
+    </item>
+    <item row="13" column="0">
+     <widget class="QLabel" name="label_15">
+      <property name="text">
+       <string>是否传输专线</string>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="1">
+     <widget class="QComboBox" name="comboBox_9"/>
+    </item>
+    <item row="13" column="2">
+     <widget class="QLabel" name="label_20">
+      <property name="text">
+       <string>附加信息</string>
+      </property>
+     </widget>
+    </item>
+    <item row="13" column="4">
+     <widget class="QComboBox" name="comboBox_19"/>
+    </item>
+    <item row="14" column="0">
+     <widget class="QLabel" name="label_11">
+      <property name="text">
+       <string>CMCC相关</string>
+      </property>
+     </widget>
+    </item>
+    <item row="14" column="1">
+     <widget class="QComboBox" name="comboBox_14"/>
+    </item>
+    <item row="14" column="4">
+     <widget class="QComboBox" name="comboBox_22"/>
+    </item>
+    <item row="15" column="0">
+     <widget class="QLabel" name="label_14">
+      <property name="text">
+       <string>CMCC电路编号</string>
+      </property>
+     </widget>
+    </item>
+    <item row="15" column="1">
+     <widget class="QComboBox" name="comboBox_13"/>
+    </item>
+    <item row="0" column="4">
+     <widget class="QCheckBox" name="checkBox">
+      <property name="text">
+       <string>首行表头</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

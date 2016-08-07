@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>style/system.qss</file>
+        <file>images/add.png</file>
+        <file>images/copy.png</file>
+        <file>images/cut.png</file>
+        <file>images/export.png</file>
+        <file>images/find.png</file>
+        <file>images/gotocell.png</file>
+        <file>images/new.png</file>
+        <file>images/open.png</file>
+        <file>images/paste.png</file>
+        <file>images/save.png</file>
+        <file>images/database.png</file>
+        <file>images/import.png</file>
+        <file>images/refresh.png</file>
+        <file>images/table.png</file>
+        <file>images/topo.png</file>
+        <file>images/sortIndicatorA.png</file>
+        <file>images/sortIndicatorD.png</file>
+        <file>images/wx.png</file>
+        <file>images/wx.ico</file>
+    </qresource>
+</RCC>

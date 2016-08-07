@@ -1,0 +1,54 @@
+﻿/* TransInsight Style */
+
+
+QToolBar{
+   background: white;
+}
+/*
+QTabWidget::pane {
+        background: white;
+        border: 1px solid gray;
+}
+*/
+QHeaderView {
+        background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                                        stop: 0 #ffffff, stop: 0.4 #ffffff,
+                                                        stop: 0.5 #F6F7F9, stop: 1.0 #F1F2F4);
+        color: #000000;
+}
+
+QHeaderView::section {
+        border-right: 1px solid qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                                                stop: 0 #f0f0f0, stop: 1.0 #D5D5D5);
+        border-bottom: 1px solid #D5D5D5;
+        border-top: none;
+        border-left: none;
+        background-color: transparent;
+        padding: 2px;
+        padding-left: 3px;
+}
+
+QHeaderView::section:hover {
+        border: 1px solid qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                                                stop: 0 #88CBEB, stop: 0.4 #88CBEB,
+                                                                stop: 0.5 #69BBE3, stop: 1.0 #69BBE3);
+        border-top: none;
+        background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                                                stop: 0 #E3F7FF, stop: 0.4 #E3F7FF,
+                                                                stop: 0.5 #B7E7FB, stop: 1.0 #B7E7FB);
+}
+
+QHeaderView::down-arrow {
+        subcontrol-origin: padding;
+        subcontrol-position: center top;
+        image: url(:/images/sortIndicatorD.png);
+}
+
+QHeaderView::up-arrow {
+        subcontrol-origin: padding;
+        subcontrol-position: center top;
+        image: url(:/images/sortIndicatorA.png);
+}
+
+
+
