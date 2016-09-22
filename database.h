@@ -180,7 +180,7 @@ static bool InsertRecords(const QStringList &records)
 
 
 static QStringList labels = {
- QStringLiteral("CMIiD:")
+  QStringLiteral("CMIiD:")
 , QStringLiteral("CircuitId(CMI):")
 , QStringLiteral("ProductName:")
 , QStringLiteral("OrderType:")

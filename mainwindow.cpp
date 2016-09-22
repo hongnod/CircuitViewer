@@ -42,7 +42,8 @@ void MainWindow::CreateCoreView()
 
     circuitModel->setEditStrategy(QSqlTableModel::OnManualSubmit);
     routeModel->setEditStrategy(QSqlTableModel::OnManualSubmit);
-    for(int n=0; n < labels.count(); n++)circuitModel->setHeaderData(n,Qt::Horizontal, labels.at(n));
+    circuitModel->setHeaderData(0, Qt::Horizontal, "SelfId");
+    for(int n=0; n < labels.count(); n++)circuitModel->setHeaderData(n+1,Qt::Horizontal, labels.at(n));
     routeModel->setHeaderData(0,Qt::Horizontal,"selfId");
     routeModel->setHeaderData(1,Qt::Horizontal,"Pid");
     routeModel->setHeaderData(2,Qt::Horizontal,QStringLiteral("路由节点"));
@@ -188,22 +189,22 @@ void MainWindow::Export()
     xl.addSheet(QStringLiteral("详细路由"));
     xl.write(1, 1, QStringLiteral("记录ID"));
 
-    xl.write(1, 2, QStringLiteral("CMI电路名称"));
-    xl.write(1, 3, QStringLiteral("CMCC电路名称"));
-    xl.write(1, 4, QStringLiteral("站点"));
+    //xl.write(1, 2, QStringLiteral("CMI电路名称"));
+    xl.write(1, 2, QStringLiteral("电路名称"));
+    //xl.write(1, 3, QStringLiteral("站点"));
 
-    xl.write(1, 5, QStringLiteral("路由"));
-    xl.write(1, 6, QStringLiteral("主/备"));
+    xl.write(1, 3, QStringLiteral("路由"));
+    xl.write(1, 4, QStringLiteral("类型"));
     QSqlQuery qry;
     int row = 2;
     QString prepid, colpid, colitem, coltype, ms_mark, presite, cursite;
-    qry.exec(QStringLiteral("select route.selfId,circuit.'CircuitId(CMI)',circuit.CMCC电路编号,route.路由项目,route.项目类型 from route join circuit on circuit.selfId = route.pid order by circuit.selfId"));
+    qry.exec(QStringLiteral("select route.selfId,circuit.`集团统一电路编号或各省自用电路编号`,route.`路由项目`, route.`项目类型` from route join circuit on circuit.selfId = route.pid order by route.selfId"));
     while(qry.next()) {
-     colpid = qry.value(1).toString();//pid
-     if(colpid != prepid) { ms_mark = ""; prepid = colpid;}
-     colitem = qry.value(3).toString();
-     coltype = qry.value(4).toString();
-     if(coltype == "site" && colitem != cursite)
+     //colpid = qry.value(1).toString();//pid
+     //if(colpid != prepid) { ms_mark = ""; prepid = colpid;}
+     //colitem = qry.value(2).toString();
+     //coltype = qry.value(3).toString();
+   /*  if(coltype == "site" && colitem != cursite)
      {
          presite = cursite;
          cursite = colitem;
@@ -214,17 +215,17 @@ void MainWindow::Export()
              if(colitem.contains( "1:")) ms_mark =QStringLiteral("主");
              if(colitem.contains("2:")) ms_mark =QStringLiteral("备");
          }
-     else{
+     else{*/
          xl.write(row, 1, qry.value(0).toString()); //selfId
          //xl.write(row, 2, colpid);
-         xl.write(row, 2, qry.value(2).toString()); //cmiid
-         xl.write(row, 3, qry.value(3).toString()); //cmccid
-         xl.write(row, 4, cursite);
+         //xl.write(row, 2, qry.value(2).toString()); //cmiid
+         xl.write(row, 2, qry.value(1).toString()); //cmccid
+         xl.write(row, 3, qry.value(2).toString());
          //xl.write(row, 6, cursite);
-         xl.write(row, 5, colitem);
-         xl.write(row, 6, ms_mark);
+         xl.write(row, 4, qry.value(3).toString());
+         //xl.write(row, 5, ms_mark);
          row++;
-     }
+     //}
     }
     xl.save();
     exportAction->setChecked(false);
